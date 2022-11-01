@@ -17,7 +17,7 @@ export const PetsList = ({ pets }) => {
   );
 
   useEffect(() => {
-    if(kind === undefined) {
+    if(kind===undefined) {
       navigate("/pets/cats")
     }
   },[])
@@ -29,7 +29,6 @@ export const PetsList = ({ pets }) => {
         {kind === undefined||kind==="cats" ? cats.map((cat) => (
           <Pet key={cat.id} kind="cat" pet={cat} />
         )):""}
-        {/* All dogs section */}
         {kind === undefined||kind==="dogs" ? dogs.map((dog) => (
           <Pet key={dog.id} kind="dog" pet={dog} />
         )):""}
